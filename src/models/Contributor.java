@@ -1,6 +1,9 @@
 package models;
 
+import java.time.LocalDate;
+
 import enums.Characterization;
+import enums.Gender;
 import enums.PensionFund;
 import enums.PublicInstitution;
 
@@ -17,10 +20,11 @@ public class Contributor {
     private boolean hasFamilyInPolice;
     private boolean hasDisciplinaryObservation;
     private boolean isPreRetired;
-    private boolean isBlacklisted;
+    private LocalDate blacklistDate;
     private PublicInstitution publicInstitution;
     private PensionFund pensionFund;
     private Characterization characterization;
+    private Gender gender;
 
     public Contributor() {
     }
@@ -28,7 +32,7 @@ public class Contributor {
     public Contributor(String idType, String id, String fullname, String city, int age, int weeksContributed,
             boolean isDecorated, boolean hasChildrenInInpec, boolean hasFamilyInPolice,
             boolean hasDisciplinaryObservation, boolean isPreRetired, boolean isBlacklisted,
-            PublicInstitution publicInstitution, PensionFund pensionFund, Characterization characterization) {
+            PublicInstitution publicInstitution, PensionFund pensionFund, Characterization characterization, Gender gender) {
 
         this.idType = idType;
         this.id = id;
@@ -41,10 +45,10 @@ public class Contributor {
         this.hasFamilyInPolice = hasFamilyInPolice;
         this.hasDisciplinaryObservation = hasDisciplinaryObservation;
         this.isPreRetired = isPreRetired;
-        this.isBlacklisted = isBlacklisted;
         this.publicInstitution = publicInstitution;
         this.pensionFund = pensionFund;
         this.characterization = characterization;
+        this.gender = gender;
 
     }
    
@@ -53,9 +57,9 @@ public class Contributor {
         return "Contributor [age=" + age + ", characterization=" + characterization + ", city=" + city + ", fullname="
                 + fullname + ", hasChildrenInInpec=" + hasChildrenInInpec + ", hasDisciplinaryObservation="
                 + hasDisciplinaryObservation + ", hasFamilyInPolice=" + hasFamilyInPolice + ", id=" + id + ", idType="
-                + idType + ", isBlacklisted=" + isBlacklisted + ", isDecorated=" + isDecorated + ", isPreRetired="
+                + idType + ", isDecorated=" + isDecorated + ", isPreRetired="
                 + isPreRetired + ", pensionFund=" + pensionFund + ", publicInstitution=" + publicInstitution
-                + ", weeksContributed=" + weeksContributed + "]";
+                + ", weeksContributed=" + weeksContributed + ", gender= " + gender + "]";
     }
 
     public String getIdType() {
@@ -103,7 +107,12 @@ public class Contributor {
     }
 
     public boolean isBlacklisted() {
-        return isBlacklisted;
+        if (blacklistDate == null) {
+            return false;
+        }
+
+        LocalDate sixMonthsAgo = LocalDate.now().minusMonths(6);
+        return blacklistDate.isAfter(sixMonthsAgo);
     }
 
     public PublicInstitution getPublicInstitution() {
@@ -116,6 +125,10 @@ public class Contributor {
 
     public Characterization getCharacterization() {
         return characterization;
+    }
+
+    public Gender getGender() {
+        return gender;
     }
 
     public void setIdType(String idType) {
@@ -162,8 +175,8 @@ public class Contributor {
         this.isPreRetired = isPreRetired;
     }
 
-    public void setBlacklisted(boolean isBlacklisted) {
-        this.isBlacklisted = isBlacklisted;
+    public void setBlacklistDate(LocalDate blacklistDate) {
+        this.blacklistDate = blacklistDate;
     }
 
     public void setPublicInstitution(PublicInstitution publicInstitution) {
@@ -176,6 +189,10 @@ public class Contributor {
 
     public void setCharacterization(Characterization characterization) {
         this.characterization = characterization;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 
 }
