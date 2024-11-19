@@ -51,16 +51,30 @@ public class App {
         }
 
         ContributorQueue approvedQueue = new ContributorQueue();
-        Blacklist blacklist = new Blacklist();
+        Blacklist embargoBlacklist = new Blacklist();
+        Blacklist inhabilitadosBlacklist = new Blacklist();
 
         for (Contributor contributor : contributors) {
             GeneralValidation validation = new GeneralValidation(contributor);
             if (validation.isValid()) {
                 approvedQueue.addContributor(contributor);
                 if (contributor.getCharacterization() == Characterization.EMBARGAR) {
-                    blacklist.add(contributor);
+                    embargoBlacklist.add(contributor);
+                } else if (contributor.getCharacterization() == Characterization.INHABILITAR) {
+                    inhabilitadosBlacklist.add(contributor);
                 }
             }
+        }
+
+        System.out.println("\nCola de cotizantes aprobados con prioridades:");
+        ContributorQueue sortedQueue = new ContributorQueue();
+        while (!approvedQueue.isQueueEmpty()) {
+            sortedQueue.addContributor(approvedQueue.removeContributor());
+        }
+        while (!sortedQueue.isQueueEmpty()) {
+            Contributor contributor = sortedQueue.removeContributor();
+            System.out.println(contributor);
+            approvedQueue.addContributor(contributor); 
         }
 
         System.out.println("\nCotizantes aprobados para traslado:");
@@ -70,14 +84,19 @@ public class App {
         }
 
         System.out.println("\nCotizantes embargables:");
-        for (Contributor blacklistedContributor : blacklist) {
+        for (Contributor blacklistedContributor : embargoBlacklist) {
             System.out.println(blacklistedContributor);
         }
 
+        System.out.println("\nCotizantes inhabilitados:");
+        for (Contributor inhabilitadoContributor : inhabilitadosBlacklist) {
+            System.out.println(inhabilitadoContributor);
+        }
+
         Contributor newContributor = new Contributor(
-                "CC", "987654321", "Nuevo Cotizante - 2", "Armenia", 35, 100, 500.0,
+                "CC", "123456789", "Nuevo Cotizante", "Bogotá", 30, 100, 500.0,
                 false, false, false, false, false, null,
-                PublicInstitution.MIN_INTERIOR, PensionFund.PORVENIR, Characterization.INHABILITAR, Gender.MASCULINO
+                PublicInstitution.POLICIA, PensionFund.PUBLICO, Characterization.ACTIVO, Gender.MASCULINO
         );
         handler.writeRow(newContributor);
 
