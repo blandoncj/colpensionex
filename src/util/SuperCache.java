@@ -1,28 +1,31 @@
 package util;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class SuperCache {
-    
     private Map<String, List<Map<String, Object>>> cache;
 
     public SuperCache() {
         this.cache = new HashMap<>();
     }
 
-    public void addCache(String filename, List<Map<String, Object>> data) {
-        cache.put(filename, data);
+    public void addCache(String archivo, List<Map<String, Object>> datos) {
+        cache.put(archivo, datos);
     }
 
-    public List<Map<String, Object>> getCache(String filename) {
-        return cache.getOrDefault(filename, new LinkedList<>());
+    public List<Map<String, Object>> getCache(String archivo) {
+        return cache.getOrDefault(archivo, new LinkedList<>());
     }
 
-    public void clearCache(String filename) {
-        cache.remove(filename);
+    public void cleanCache(String archivo) {
+        cache.remove(archivo);
     }
 
+    public boolean fileExistsInCache(String archivo) {
+        return cache.containsKey(archivo);
+    }
+
+    public Set<String> getCachedFiles() {
+        return cache.keySet();
+    }
 }

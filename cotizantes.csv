@@ -1,0 +1,40 @@
+idType,id,fullname,city,age,weeksContributed,savings,isDecorated,hasChildrenInInpec,hasFamilyInPolice,hasDisciplinaryObservation,isPreRetired,blacklistDate,publicInstitution,pensionFund,characterization,gender
+CC,206877649,Juan Perez,Bogotá,45,150,1050.50,false,false,true,false,true,2023-01-15,ARMADA,PRIVADO,EMBARGAR,MASCULINO
+TI,218530298,Maria Gomez,Medellín,35,120,730.00,true,true,false,true,false,2022-05-01,MIN_INTERIOR,PUBLICO,ACTIVO,FEMENINO
+CE,272839493,Carlos Ruiz,Cali,55,180,980.75,false,false,true,false,true,2021-03-20,INPEC,PRIVADO,INACTIVO,MASCULINO
+PA,238243587,Laura Martinez,Barranquilla,29,100,540.20,true,true,false,false,false,2020-11-12,MIN_SALUD,PUBLICO,ACTIVO,FEMENINO
+RC,227384027,Pedro Sanchez,Cartagena,50,200,1350.00,false,false,true,true,true,2019-07-15,POLICIA,PRIVADO,EMBARGAR,MASCULINO
+CC,245873561,Lucia Fernandez,Manizales,60,170,700.50,true,true,false,false,false,2023-02-01,ARMADA,PUBLICO,ACTIVO,FEMENINO
+TI,253874942,Jose Ramirez,Pereira,40,160,910.30,false,false,true,true,true,2022-03-05,MIN_INTERIOR,PRIVADO,INACTIVO,MASCULINO
+CE,264923764,Ana Torres,Bogotá,70,220,1250.00,true,true,false,false,false,2018-02-12,INPEC,PUBLICO,ACTIVO,FEMENINO
+PA,239276458,David Lopez,Bucaramanga,33,140,600.40,false,false,true,true,true,2024-06-30,MIN_SALUD,PRIVADO,EMBARGAR,MASCULINO
+RC,229047635,Elena Diaz,Medellín,48,210,1200.75,true,true,false,false,false,2020-02-17,POLICIA,PUBLICO,ACTIVO,FEMENINO
+CC,206275648,Roberto Garcia,Cartagena,42,160,750.00,false,false,true,true,true,2019-08-05,ARMADA,PRIVADO,INACTIVO,MASCULINO
+TI,256837492,Patricia Herrera,Neiva,39,190,850.20,true,true,false,false,false,2021-10-10,MIN_INTERIOR,PUBLICO,ACTIVO,FEMENINO
+CE,272638949,Andres Morales,Cúcuta,63,220,950.10,false,false,true,true,true,2022-01-20,INPEC,PRIVADO,EMBARGAR,MASCULINO
+PA,237492832,Claudia Rojas,Tunja,41,210,700.60,true,true,false,false,false,2020-05-18,MIN_SALUD,PUBLICO,ACTIVO,FEMENINO
+RC,240584762,Francisco Castro,Armenia,69,240,1300.40,false,false,true,true,true,2018-03-09,POLICIA,PRIVADO,INACTIVO,MASCULINO
+CC,249273561,Isabel Vargas,Bogotá,54,180,880.25,true,true,false,false,false,2023-02-14,ARMADA,PUBLICO,ACTIVO,FEMENINO
+TI,218349204,Oscar Mendoza,Medellín,48,210,990.10,false,false,true,true,true,2020-06-11,MIN_INTERIOR,PRIVADO,EMBARGAR,MASCULINO
+CE,228384902,Monica Ortiz,Bucaramanga,26,180,630.50,true,true,false,false,false,2023-05-01,INPEC,PUBLICO,ACTIVO,FEMENINO
+PA,256728489,Alberto Suarez,Cali,37,150,700.60,false,false,true,true,true,2022-09-03,MIN_SALUD,PRIVADO,INACTIVO,MASCULINO
+RC,245872349,Gloria Jimenez,Pereira,60,210,1150.20,true,true,false,false,false,2019-12-28,POLICIA,PUBLICO,ACTIVO,FEMENINO
+CC,240627883,Raul Gutierrez,Manizales,39,190,880.75,false,false,true,true,true,2021-07-14,ARMADA,PRIVADO,EMBARGAR,MASCULINO
+TI,279463028,Adriana Pineda,Medellín,50,200,1050.80,true,true,false,false,false,2023-04-16,MIN_INTERIOR,PUBLICO,ACTIVO,FEMENINO
+CE,215672804,Victor Salazar,Cúcuta,60,230,1200.60,false,false,true,true,true,2021-01-25,INPEC,PRIVADO,INACTIVO,MASCULINO
+PA,242384903,Daniela Vargas,Bogotá,47,180,720.25,true,true,false,false,false,2022-03-12,MIN_SALUD,PUBLICO,ACTIVO,FEMENINO
+RC,226384759,Julian Pacheco,Armenia,59,200,1100.40,false,false,true,true,true,2020-08-17,POLICIA,PRIVADO,EMBARGAR,MASCULINO
+CC,257283902,Carolina Reyes,Barranquilla,36,160,850.90,true,true,false,false,false,2023-01-21,ARMADA,PUBLICO,ACTIVO,FEMENINO
+TI,276932647,Manuel Ortiz,Pereira,70,220,1250.00,false,false,true,true,true,2018-11-19,MIN_INTERIOR,PRIVADO,INACTIVO,MASCULINO
+CE,240573829,Paula Ramirez,Cali,64,230,950.50,true,true,false,false,false,2019-05-03,INPEC,PUBLICO,ACTIVO,FEMENINO
+PA,218372926,Diego Torres,Medellín,27,150,640.20,false,false,true,true,true,2021-07-29,MIN_SALUD,PRIVADO,EMBARGAR,MASCULINO
+RC,245762819,Angela Herrera,Bogotá,33,190,800.10,true,true,false,false,false,2022-11-10,POLICIA,PUBLICO,ACTIVO,FEMENINO
+CC,229384561,Esteban Ruiz,Cúcuta,48,210,1100.50,true,true,false,false,true,2020-03-21,ARMADA,PRIVADO,INACTIVO,MASCULINO
+TI,260473020,Laura Pacheco,Barranquilla,54,190,950.00,false,false,true,true,true,2019-08-09,MIN_INTERIOR,PUBLICO,ACTIVO,FEMENINO
+CE,228573926,Alfredo Gomez,Manizales,41,210,970.75,true,true,false,false,false,2022-10-01,INPEC,PRIVADO,EMBARGAR,MASCULINO
+PA,273894052,Silvia Martinez,Cali,45,200,880.60,false,false,true,true,true,2023-04-17,MIN_SALUD,PUBLICO,ACTIVO,FEMENINO
+RC,253284692,Roberto Diaz,Medellín,60,220,1200.10,true,true,false,false,false,2018-02-12,POLICIA,PRIVADO,INACTIVO,MASCULINO
+CC,123456789,Nuevo Cotizante,Bogotá,30,100,500.0,false,false,false,false,false,,POLICIA,PUBLICO,ACTIVO,MASCULINO
+CC,987654321,Nuevo Cotizante - 2,Armenia,35,100,500.0,false,false,false,false,false,,MIN_INTERIOR,PORVENIR,INHABILITAR,MASCULINO
+CC,987654321,Nuevo Cotizante - 2,Armenia,35,100,500.0,false,false,false,false,false,,MIN_INTERIOR,PORVENIR,INHABILITAR,MASCULINO
+CC,987654321,Nuevo Cotizante - 2,Armenia,35,100,500.0,false,false,false,false,false,,MIN_INTERIOR,PORVENIR,INHABILITAR,MASCULINO

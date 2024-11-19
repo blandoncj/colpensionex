@@ -15,6 +15,7 @@ public class Contributor {
     private String city;
     private int age;
     private int weeksContributed;
+    private double savings;
     private boolean isDecorated;
     private boolean hasChildrenInInpec;
     private boolean hasFamilyInPolice;
@@ -30,9 +31,10 @@ public class Contributor {
     }
 
     public Contributor(String idType, String id, String fullname, String city, int age, int weeksContributed,
-            boolean isDecorated, boolean hasChildrenInInpec, boolean hasFamilyInPolice,
-            boolean hasDisciplinaryObservation, boolean isPreRetired, boolean isBlacklisted,
-            PublicInstitution publicInstitution, PensionFund pensionFund, Characterization characterization, Gender gender) {
+            double savings, boolean isDecorated, boolean hasChildrenInInpec, boolean hasFamilyInPolice,
+            boolean hasDisciplinaryObservation, boolean isPreRetired, LocalDate blacklistDate,
+            PublicInstitution publicInstitution, PensionFund pensionFund, Characterization characterization,
+            Gender gender) {
 
         this.idType = idType;
         this.id = id;
@@ -40,18 +42,19 @@ public class Contributor {
         this.city = city;
         this.age = age;
         this.weeksContributed = weeksContributed;
+        this.savings = savings;
         this.isDecorated = isDecorated;
         this.hasChildrenInInpec = hasChildrenInInpec;
         this.hasFamilyInPolice = hasFamilyInPolice;
         this.hasDisciplinaryObservation = hasDisciplinaryObservation;
         this.isPreRetired = isPreRetired;
+        this.blacklistDate = blacklistDate;
         this.publicInstitution = publicInstitution;
         this.pensionFund = pensionFund;
         this.characterization = characterization;
         this.gender = gender;
-
     }
-   
+
     @Override
     public String toString() {
         return "Contributor [age=" + age + ", characterization=" + characterization + ", city=" + city + ", fullname="
@@ -60,6 +63,10 @@ public class Contributor {
                 + idType + ", isDecorated=" + isDecorated + ", isPreRetired="
                 + isPreRetired + ", pensionFund=" + pensionFund + ", publicInstitution=" + publicInstitution
                 + ", weeksContributed=" + weeksContributed + ", gender= " + gender + "]";
+    }
+
+    public LocalDate getBlacklistDate() {
+        return blacklistDate;
     }
 
     public String getIdType() {
@@ -193,6 +200,14 @@ public class Contributor {
 
     public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    public double getSavings() {
+        return savings;
+    }
+
+    public void setSavings(double savings) {
+        this.savings = savings;
     }
 
 }
