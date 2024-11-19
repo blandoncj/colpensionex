@@ -6,6 +6,8 @@ public enum PensionFund {
     PORVENIR,
     PROTECCION,
     OLD_MUTUAL,
+    PUBLICO,
+    PRIVADO,
     FOREIGN;
 
 }
